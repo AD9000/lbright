@@ -1,6 +1,7 @@
 #!/bin/bash
 
 disp=`xrandr | egrep " connected " | cut -d' ' -f1`
+name='xlbright'
 # if user enters a number...
 if [ ! -z `echo $1 | egrep "^[.0-9]+$"` ]
 then
@@ -12,5 +13,5 @@ then
         echo "brightness must be between 0 and 1"
     fi
 else
-    echo "$0: Usage: xlbright <number between 0 and 1>"
+    echo "$name: Usage: $name <number between 0 and 1>"
 fi
