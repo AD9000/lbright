@@ -1,11 +1,11 @@
 #!/bin/bash
 
-disp=xrandr | egrep " connected " | cut -d' ' -f1
+disp=`xrandr | egrep " connected " | cut -d' ' -f1`
 # if user enters a number...
-if [ ! -z `echo $1 | egrep "^[0-9]+$"` ]
+if [ ! -z `echo $1 | egrep "^[.0-9]+$"` ]
 then
     # if user enters a number between 0 and 1
-    if [ "$1" -gt 0 ] && [ "$1" -lt 1 ]
+    if (( $(echo "$1 > 0" |bc -l) )) && (( $(echo "$1 < 1" |bc -l) ))
     then
         xrandr --output "$disp" --brightness "$1"
     else
