@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# folder='/bin/lbright'
+
+# if [ ! -d "$folder" ]
+# then
+#     sudo mkdir "$folder"
+# fi
+
+# cp for temporary use. Final one make this mv (or just install there...)
+# sudo cp -r . "$folder"
+sudo cp xlbright /bin/xlbright
+sudo cp brightness /bin/brightness
+
+# Setup permissions...
+# sudo chmod +x "$folder"
+sudo chmod +x "/bin/xlbright"
+sudo chmod +x "/bin/brightness"
+
+export PATH=$PATH:/bin
