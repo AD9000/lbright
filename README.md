@@ -7,3 +7,7 @@ In case you dont have sudo rights for some reason, say you're on a school/work l
 
 ##### TODO:
 1. Convert the numbers to a percentage.
+2. Testing on multiple systems!
+3. Connect it to the brightness buttons on the keyboard
+4. Add nightshift
+5. Map them together with switches for each
